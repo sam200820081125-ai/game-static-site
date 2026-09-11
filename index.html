@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="遊戲作品與內容展示網站，可擴充文字、圖片、影片、HTML 作品與簡報。" />
+  <title>GAME//VAULT 遊戲展示庫</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GAME VAULT 首頁">
+        <span class="brand-mark">GV</span>
+        <span class="brand-copy">
+          <strong>GAME//VAULT</strong>
+          <small>PLAY · BUILD · SHARE</small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#featured">精選作品</a>
+        <a href="#about">網站特色</a>
+        <a href="#footer">聯絡資訊</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">PLAYER ONE READY</p>
+          <h1>把遊戲靈感、作品與故事，<span>集中在一個可擴充的展示庫。</span></h1>
+          <p class="hero-text">從遊戲介紹、開發紀錄到實機影片、網頁小遊戲與提案簡報，都能用同一套卡片系統持續增加內容。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#featured">瀏覽遊戲</a>
+            <a class="button ghost" href="#about">了解架構</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="hud-line"><span>COLLECTION</span><strong>03</strong></div>
+          <div class="hero-orb"></div>
+          <div class="pixel-grid"></div>
+          <div class="hud-stats">
+            <span>TEXT</span><span>IMAGE</span><span>VIDEO</span><span>HTML</span><span>SLIDES</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="filters" aria-label="內容篩選">
+        <button class="filter-button active" data-filter="all">全部</button>
+        <button class="filter-button" data-filter="adventure">冒險</button>
+        <button class="filter-button" data-filter="strategy">策略</button>
+        <button class="filter-button" data-filter="arcade">街機</button>
+      </section>
+
+      <section class="featured-section" id="featured">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FEATURED GAMES</p>
+            <h2>精選遊戲條目</h2>
+          </div>
+          <p>目前放入 3 個範例。之後只要在 <code>script.js</code> 的資料陣列中新增條目，就會自動產生卡片。</p>
+        </div>
+        <div class="game-grid" id="game-grid"></div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">BUILT TO EXPAND</p>
+          <h2>為持續新增內容而設計</h2>
+          <p>每個遊戲條目都能獨立加入多種素材，不需要修改版面結構。卡片會自動顯示該條目具備的內容類型，點擊後再開啟完整內容面板。</p>
+        </div>
+        <div class="feature-grid">
+          <article><strong>01</strong><h3>資料驅動</h3><p>內容與版型分離，擴充新遊戲更快速。</p></article>
+          <article><strong>02</strong><h3>多媒體</h3><p>支援文字、圖片、影片、HTML 與簡報連結。</p></article>
+          <article><strong>03</strong><h3>響應式</h3><p>桌機、平板與手機都維持清楚的閱讀層級。</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div>
+        <strong>GAME//VAULT</strong>
+        <p>一個為遊戲作品、創作與提案打造的靜態展示網站。</p>
+      </div>
+      <p>© 2026 GAME//VAULT. Static HTML / CSS / JavaScript.</p>
+    </footer>
+  </div>
+
+  <dialog class="game-dialog" id="game-dialog">
+    <button class="dialog-close" type="button" aria-label="關閉">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
